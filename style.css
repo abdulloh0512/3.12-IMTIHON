@@ -1,0 +1,766 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Commissioner', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --red: #F94F4F;
+    --bg-black: #191921;
+    font-size: 15px;
+    --image-gradient: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 28%, rgba(0, 0, 0, 0) 100%);
+}
+
+p {
+    line-height: 25px;
+}
+
+header {
+    height: 110px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    align-items: center;
+    position: relative;
+}
+
+.burger {
+    cursor: pointer;
+}
+
+.burger.close {
+    width: 24px;
+    height: 18px;
+    background-image: url('./mobil_line.svg');
+}
+
+.menu {
+    position: absolute;
+    top: 100%;
+    width: 252px;
+    height: 292px;
+    right: 26px;
+    background: var(--bg-black);
+}
+
+.burger.close .menu {
+    display: none;
+}
+
+.menu ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu ul li a {
+    font-size: 18px;
+    color: #fff;
+}
+
+.menu ul li .hover-link:hover {
+    -webkit-text-stroke: 1px white;
+}
+
+.red-box-link,
+.dark-box-link {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 199px;
+    height: 64px;
+    background: var(--red);
+    font-weight: 800;
+}
+
+.red-box-link,
+.dark-box-link,
+.red-dashed-link,
+.previous,
+.next,
+.red-dashed-link::after {
+    transition: 0.1s linear;
+}
+
+.red-box-link:hover,
+.dark-box-link:hover {
+    cursor: pointer;
+    background: #FF9393;
+}
+
+.previous:hover svg g,
+.next:hover svg g {
+    stroke: #FF9393;
+    cursor: pointer;
+}
+
+.red-box-link a,
+.dark-box-link a {
+    color: #fff;
+}
+
+.hero {
+    width: 100%;
+    height: 200px;
+    background: url('./mobil_aka.png');
+    background-size: cover;
+}
+
+.about {
+    padding: 56px 24px 96px 24px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 40px;
+}
+
+.about p {
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.about .red-box-link {
+    width: 177px;
+    height: 72px;
+}
+
+.schedule {
+    position: relative;
+    background-color: var(--bg-black);
+    color: white;
+}
+
+.red-tilde {
+    position: absolute;
+    top: calc(200px - calc(29px / 2));
+    left: 24px;
+    width: 63px;
+    height: 29px;
+}
+
+.red-tilde img {
+    height: 100%;
+    width: 100%;
+}
+
+.image-schedule {
+    width: 100%;
+    height: 200px;
+    background: center center no-repeat url('./mobil_nout.png');
+    background-size: cover;
+}
+
+.schedule .content {
+    height: calc(100% - 200px);
+    padding: 72px 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+h2,
+h3 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #fff;
+}
+
+h2 span {
+    color: var(--red);
+}
+
+.schedule .content p {
+    margin-top: 24px;
+    margin-bottom: 40px;
+}
+
+.red-dashed-link {
+    width: fit-content;
+    position: relative;
+    color: var(--red);
+    font-weight: 800;
+}
+
+.red-dashed-link::after {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--red);
+}
+
+.red-dashed-link:hover {
+    color: #FF9393;
+}
+
+.red-dashed-link:hover::after {
+    background-color: #FF9393;
+}
+
+.winning-brand {
+    background-color: var(--red);
+    padding: 96px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.winning-brand .winning-brand-content {
+    background-color: var(--red);
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 93px;
+    max-width: 355px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 84px;
+    color: white;
+}
+
+.item:last-child {
+    margin-bottom: 0px;
+}
+
+.item .number {
+    font-size: 80px;
+    font-weight: 800;
+    opacity: 0.4;
+    z-index: 0;
+    position: absolute;
+    top: -49px;
+    z-index: 0;
+}
+
+.item .content {
+    margin-left: 16px;
+}
+
+.item .title {
+    font-weight: 800;
+    z-index: 1;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.item .text {
+    line-height: 25px;
+}
+
+.slider {
+    color: white;
+    position: relative;
+}
+
+.slider .image {
+    width: 100%;
+    height: 404px;
+    background: center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.slider .background-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--bg-black);
+}
+
+.slider .image1 {
+    background-image: var(--image-gradient), url('./mobil_book.png');
+}
+
+.slider .slide-previous,
+.slider .slide-next {
+    animation: slide 0.5s linear;
+    -webkit-animation:  slide 0.5s linear;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    right: 32px;
+    bottom: 35px;
+    line-height: 20px;
+}
+
+.description .main {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.white-tilde {
+    display: none;
+}
+
+.bottom-slider {
+    display: flex;
+    flex-direction: column;
+    padding: 64px 24px;
+    background-color: var(--bg-black);
+}
+
+.slider-buttons {
+    margin-top: 24px;
+    display: flex;
+}
+
+.previous {
+    margin-right: 16px;
+}
+
+.previous,
+.next {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.together {
+    padding: 100px 24px;
+}
+
+.together .red-tilde {
+    display: none;
+}
+
+.together h2 {
+    margin-bottom: 47px;
+    color: black;
+}
+
+@media (min-width:768px) {
+
+    .container {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+
+    header {
+        height: 178px;
+        padding-left: 39px;
+        padding-right: 0;
+    }
+    .burger {
+        position: relative;
+        min-width: 438px;
+        max-width: 705px;
+        height: 100%;
+        background-image: unset;
+    }
+    .burger:hover {
+        cursor: initial;
+    }
+    .burger.close {
+        min-width: 438px;
+        width: calc(100% - 438px);
+        height: 100%;
+        background-image: unset;
+    }
+    .burger.close .menu {
+        display: flex;
+    }
+    .menu {
+        top: 0;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        background: var(--red);
+    }
+    .menu ul {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: unset;
+        padding-left: 33px;
+    }
+    .menu ul li {
+        padding-right: 20px;
+    }
+    .menu ul li a {
+        font-size: 15px;
+        color: #fff;
+    }
+    .menu ul .dark-box-link {
+        margin-left: 8px;
+        background: var(--bg-black);
+        height: 64px;
+        width: 147px;
+        padding-right: 0;
+    }
+    .dark-box-link a {
+        font-size: 16px !important;
+    }
+    .menu ul .dark-box-link:hover {
+        background: #434356;
+    }
+
+    .hero_main {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .hero {
+        width: 438px;
+        height: 606px;
+        background: url('./tablet_aka.png');
+        z-index: -1;
+    }
+    .about {
+        margin-left: 39px;
+        padding: 0;
+        padding-top: 77px;
+        width: 398px;
+        height: 606px;
+        position: relative;
+    }
+
+    .about h1 {
+        position: absolute;
+        width: 500px;
+    }
+
+    h1 {
+        font-size: 56px;
+    }
+    .about p {
+        margin-top: 19px;
+        margin-bottom: 32px;
+        margin-top: 240px;
+    }
+    .schedule {
+        display: flex;
+        height: 538px;
+    }
+    .red-tilde {
+        position: absolute;
+        top: 145px;
+        left: calc(378px - calc(63px / 2));
+        width: 63px;
+        height: 29px;
+    }
+    .image-schedule {
+        width: 378px;
+        height: 658px;
+        background: center center url('./tablet_nout.png');
+    }
+    .schedule .content {
+        height: 100%;
+        width: calc(100% - 378px);
+        padding: 0;
+        padding-left: 69px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .content h2 {
+        width: 250px;
+    }
+    .schedule .content p {
+        width: 281px;
+        margin: 32px 0;
+    }
+    .winning-brand {
+        background-color: white;
+        padding: 0;
+        flex-direction: row;
+        align-items: unset;
+        height: 797px;
+    }
+    .winning-brand .winning-brand-content {
+        padding: 164px 40px 120px 43px;
+        background-color: var(--red);
+        width: calc(100% - 330px);
+        z-index: 2;
+        height: 100%;
+        justify-self: flex-end;
+        display: flex;
+        justify-content: center;
+    }
+    .winning-brand .head {
+        display: flex;
+        justify-content: center;
+        margin-top: 246px;
+        width: 330px;
+    }
+    .winning-brand h2 {
+        color: black;
+        width: 281px;
+    }
+    .items {
+        margin-top: 0;
+        height: 100%;
+        justify-content: space-between;
+    }
+    .slider {
+        height: 472px;
+        display: flex;
+        flex-direction: row-reverse;
+        position: relative;
+    }
+    .slider .image {
+        /* width: 438px; */
+        height: 100%;
+        background: center center no-repeat;
+        background-size: cover;
+        position: relative;
+        width: calc(100% - 330px);
+    }
+    .slider .background-color {
+        left: unset;
+        right: 0;
+        width: calc(100% - 330px);
+    }
+    .slider .image1 {
+        background-image: var(--image-gradient), url('./tablet_book.png');
+    }
+    .white-tilde {
+        display: initial;
+        position: absolute;
+        top: 126px;
+        left: calc(390px - calc(63px / 2));
+        width: 63px;
+        height: 29px;
+        z-index: 2;
+    }
+    .white-tilde img {
+        height: 100%;
+        width: 100%;
+    }
+    .bottom-slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 352px;
+        width: 390px;
+        padding: 100px 39px;
+        background-color: var(--bg-black);
+    }
+    .together {
+        padding: 70px 40px 100px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .together h2 {
+        margin-bottom: 0;
+        width: 398px;
+        color: black;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    header {
+        height: 178px;
+        padding-left: 165px;
+        padding-right: 0;
+    }
+    .menu ul {
+        padding-left: 69px;
+    }
+    .menu ul li {
+        padding-right: 32px;
+    }
+    .menu ul li a {
+        font-size: 16px;
+    }
+    .menu ul .dark-box-link {
+        margin-left: 15px;
+        height: 64px;
+        width: 199px;
+    }
+    .dark-box-link a {
+        font-size: 18px !important;
+    }
+    .hero {
+        width: 895px;
+        height: 800px;
+        background: url('./Bitmap\ \(47\).png');
+        z-index: -1;
+    }
+    .about {
+        margin-left: 165px;
+        padding-top: 112px;
+        width: 720px;
+        height: 800px;
+    }
+
+    .about h1 {
+        width: 700px;
+    }
+
+    h1 {
+        font-size: 80px;
+    }
+    .about p {
+        margin-top: 320px;
+        margin-bottom: 32px;
+        font-size: 18px;
+        width: 540px;
+    }
+    .schedule {
+        display: flex;
+        height: 784px;
+    }
+    .red-tilde {
+        position: absolute;
+        top: 234px;
+        left: calc(735px - calc(134px / 2));
+        width: 134px;
+        height: 60px;
+    }
+    .image-schedule {
+        height: 984px;
+        width: 735px;
+        background: center center url('./Bitmap\ Copy\ \(1\).png');
+    }
+    .schedule .content {
+        height: 100%;
+        width: calc(100% - 735px);
+        padding: 0;
+        padding-left: 154px;
+        padding-top: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: unset;
+    }
+    h2,
+    h3 {
+        font-size: 56px;
+    }
+    .schedule .content p {
+        width: 445px;
+        margin: 43px 0 48px 0;
+        font-size: 18px;
+    }
+    .red-dashed-link {
+        font-size: 18px;
+    }
+    .winning-brand {
+        background-color: white;
+        padding: 0;
+        flex-direction: row;
+        align-items: unset;
+        height: 1100px;
+    }
+    .winning-brand .winning-brand-content {
+        padding: 244px 106px 240px 285px;
+        width: calc(100% - 545px);
+        z-index: 2;
+    }
+    .winning-brand .head {
+        margin-top: 400px;
+        width: 545px;
+        justify-content: flex-start;
+    }
+    .winning-brand h2 {
+        transform: translateX(165px);
+        z-index: 3;
+        width: 540px;
+        font-size: 56px;
+    }
+    .items {
+        max-width: 504px;
+    }
+    .item {
+        width: 445px;
+        margin-bottom: 100px;
+        color: white;
+    }
+    .item .title {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+    .item .number {
+        top: -54px;
+        left: -43px;
+    }
+    .item .text {
+        font-size: 18px;
+        line-height: 32px;
+    }
+    .slider {
+        height: 728px;
+    }
+    .slider .image {
+        width: calc(100% - 545px);
+    }
+    .slider .background-color {
+        width: calc(100% - 545px);
+    }
+    .slider .image1 {
+        background-image: var(--image-gradient), url('./Bitmap\ \(48\).png');
+    }
+    .description .main {
+        font-size: 20px;
+    }
+    .description .date {
+        font-size: 18px;
+    }
+    .white-tilde {
+        top: 186px;
+        left: calc(735px - calc(134px / 2));
+        width: 134px;
+        height: 60px;
+    }
+    .white-tilde img {
+        height: 100%;
+        width: 100%;
+    }
+    .bottom-slider {
+        height: 528px;
+        width: 735px;
+        padding: 152px 125px 152px 165px;
+    }
+    .bottom-slider h3 {
+        font-size: 56px;
+    }
+    .slider-buttons {
+        margin-top: 51px;
+    }
+    .together {
+        padding: 70px 165px 100px 165px;
+        position: relative;
+    }
+    .together .red-tilde {
+        display: initial;
+        top: calc(50% - calc(60px / 2));
+        left: calc(-134px / 2);
+    }
+    .together h2 {
+        width: 635px;
+    }
+}
+
+
+
