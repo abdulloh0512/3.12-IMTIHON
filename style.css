@@ -538,7 +538,7 @@ h2 span {
         width: calc(100% - 330px);
     }
     .slider .image1 {
-        background-image: var(--image-gradient), url('./tablet_book.png');
+        background-image: var(--image-gradient), url('./tablet-book.png');
     }
     .white-tilde {
         display: initial;
